@@ -1,0 +1,251 @@
+.restaurant-page {
+    background: #0f172a;
+    padding: 80px 8%;
+    min-height: 100vh;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.menu-header h2 {
+    color: white;
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.menu-header p {
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+/* Added: Step 4 Multi-Column Sidebar Layout Layout */
+.restaurant-layout {
+    display: grid;
+    grid-template-columns: 2fr 380px;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Updated: Optimized Foods Grid Parameters */
+.foods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.food-card {
+    background: #1e293b;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: .35s;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .25);
+}
+
+.food-card:hover {
+    transform: translateY(-10px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.food-card:hover img {
+    transform: scale(1.08);
+}
+
+.food-content {
+    padding: 24px;
+}
+
+.food-content h3 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.food-content p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-bottom h4 {
+    color: #ff6b35;
+    font-size: 26px;
+}
+
+.food-bottom button {
+    border: none;
+    background: #ff6b35;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.food-bottom button:hover {
+    background: #ff814d;
+}
+
+/* Added: Responsive Breakpoints & Flow Modifiers */
+@media(max-width: 1100px) {
+    .restaurant-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-sidebar {
+        position: static;
+    }
+}
+.food-card{
+    position:relative;
+}
+
+.favorite-btn{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    color:#ef4444;
+
+    font-size:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:.25s;
+
+    z-index:5;
+
+}
+
+.favorite-btn:hover{
+
+    transform:scale(1.1);
+
+    background:#ef4444;
+
+    color:white;
+
+}
+.review-section{
+
+margin-top:70px;
+
+}
+
+.review-form{
+
+background:#fff;
+
+padding:25px;
+
+border-radius:15px;
+
+margin-bottom:35px;
+
+}
+
+.review-form textarea{
+
+width:100%;
+
+height:120px;
+
+margin-top:15px;
+
+padding:15px;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+}
+
+.review-form button{
+
+margin-top:20px;
+
+background:#ff4d4f;
+
+color:white;
+
+padding:12px 30px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.review-card{
+
+background:white;
+
+padding:20px;
+
+border-radius:12px;
+
+margin-bottom:20px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.review-top{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:15px;
+
+}
+
+.delete-review{
+
+margin-top:15px;
+
+background:#ef4444;
+
+color:white;
+
+border:none;
+
+padding:8px 18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}

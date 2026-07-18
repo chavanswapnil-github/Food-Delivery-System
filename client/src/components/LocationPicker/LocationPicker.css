@@ -1,0 +1,123 @@
+.location-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.lp-search-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lp-search-box {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 14px;
+}
+
+.lp-search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.lp-search-icon {
+  color: var(--text2);
+  flex-shrink: 0;
+}
+
+.lp-spinner {
+  animation: lp-spin 0.9s linear infinite;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+@keyframes lp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.lp-locate-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 107, 53, 0.12);
+  color: var(--primary);
+  border: 1px solid rgba(255, 107, 53, 0.4);
+  border-radius: 10px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lp-locate-btn:hover:not(:disabled) {
+  background: rgba(255, 107, 53, 0.2);
+}
+
+.lp-locate-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.lp-suggestions {
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  list-style: none;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lp-suggestions li {
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--text2);
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+}
+
+.lp-suggestions li:last-child {
+  border-bottom: none;
+}
+
+.lp-suggestions li:hover {
+  background: var(--background);
+  color: var(--text);
+}
+
+.lp-map-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.lp-map {
+  height: 260px;
+  width: 100%;
+  background: var(--card);
+}
+
+.lp-hint {
+  font-size: 12px;
+  color: var(--text2);
+}

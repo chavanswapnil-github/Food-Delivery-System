@@ -1,0 +1,232 @@
+/* Step 1: Import the font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    background: #0f172a;
+}
+
+/* LEFT SIDE */
+.auth-left {
+    flex: 1;
+    background: linear-gradient(135deg, #111827, #1f2937, #374151);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px;
+}
+
+.auth-left img {
+    width: 320px;
+    max-width: 80%;
+    object-fit: contain;
+}
+
+/* Step 4: Brand Tagline CSS */
+.brand-tagline {
+    color: #f59e0b;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/* Step 2: FoodHub title */
+.auth-left h1 {
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 20px 0 10px;
+    color: #fff;
+}
+
+/* Step 3: Subtitle styling */
+.auth-left p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #e5e7eb;
+    text-align: center;
+    max-width: 500px;
+}
+
+/* RIGHT SIDE */
+.auth-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.auth-card {
+    background: #1e293b;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, .08);
+    width: 100%;
+    max-width: 460px;
+}
+
+/* Step 6: Register title modification */
+.auth-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* Step 7: Subtitle styling modification */
+.auth-subtitle {
+    color: #94a3b8;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+/* Step 8: Labels styling modification */
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* Step 9: Inputs typography update applied directly to inputs */
+.input-group input,
+.input-group select,
+.auth-input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #334155;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: 2px solid #f59e0b;
+}
+
+/* Step 10: Button design updates */
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.35);
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.google-auth-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #cbd5e1;
+}
+
+.auth-footer a {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+@media(max-width: 900px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-left {
+        display: none;
+    }
+
+    .auth-right {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-right {
+        padding: 14px;
+    }
+
+    .auth-card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .auth-title {
+        font-size: 32px;
+    }
+
+    .auth-subtitle {
+        font-size: 15px;
+        margin-bottom: 22px;
+    }
+
+    .input-group input,
+    .input-group select,
+    .auth-input {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .auth-btn {
+        font-size: 16px;
+        padding: 13px;
+    }
+}

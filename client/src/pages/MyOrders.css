@@ -1,0 +1,78 @@
+.orders-page{
+    max-width:1100px;
+    margin:auto;
+    padding:40px;
+}
+
+.orders-header{
+    margin-bottom:35px;
+}
+
+.orders-header h1{
+    margin-bottom:8px;
+}
+
+.order-card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.order-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.status{
+    color:white;
+    padding:8px 16px;
+    border-radius:25px;
+    font-size:14px;
+}
+
+.order-info{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin:25px 0;
+}
+
+.order-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.view-btn{
+    background:#2563eb;
+    color:white;
+    padding:10px 20px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.cancel-btn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.empty-orders{
+    text-align:center;
+    padding:80px;
+}
+
+.shop-btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#ef4444;
+    color:white;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:10px;
+}

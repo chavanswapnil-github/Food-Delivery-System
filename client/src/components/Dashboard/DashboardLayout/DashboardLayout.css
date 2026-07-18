@@ -1,0 +1,19 @@
+.dashboard{
+
+    display:flex;
+}
+
+.dashboard-content{
+
+    margin-left:260px;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:40px;
+}

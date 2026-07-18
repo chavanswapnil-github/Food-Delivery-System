@@ -1,0 +1,111 @@
+/* Step 2 & 3: Global Font, Reset and Modern Theme System Variable Declarations */
+:root {
+  --primary: #ff6b35;
+  --primary-hover: #ff814d;
+  --background: #0f172a;
+  --card: #1e293b;
+  --text: #f8fafc;
+  --text2: #94a3b8;
+  --border: #334155;
+  --success: #22c55e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Step 4: Smooth Animations across global layout components */
+button,
+a,
+.card,
+.category-card,
+.restaurant-card {
+  transition: 0.35s ease;
+}
+
+/* Step 5: Custom Premium Scrollbar Implementation */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Step 6: Responsive Layout Container Class */
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Step 7: Premium Section Title & Subtitle Typography Utilities */
+.section-title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--text2);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* Step 8: Production-grade Action Button */
+.primary-btn {
+  background: var(--primary);
+  color: white;
+  padding: 16px 34px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  background: var(--primary-hover);
+}

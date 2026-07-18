@@ -1,0 +1,51 @@
+.orders-card{
+
+    background:#1e293b;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    color:white;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.orders-card h2{
+
+    margin-bottom:25px;
+}
+
+.order-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.order-row:last-child{
+
+    border-bottom:none;
+}
+
+.order-row p{
+
+    color:#94a3b8;
+}
+
+.order-row span{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#22c55e;
+
+    font-size:14px;
+}

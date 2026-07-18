@@ -1,0 +1,34 @@
+.quick-actions{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+}
+
+.quick-actions button{
+
+    background:#ff6b35;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 25px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.quick-actions button:hover{
+
+    transform:scale(1.05);
+}

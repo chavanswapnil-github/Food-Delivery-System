@@ -1,0 +1,198 @@
+/* =====================================================================
+   GLOBAL MOBILE RESPONSIVENESS LAYER
+   ---------------------------------------------------------------------
+   Many component stylesheets in this project were built with fixed
+   desktop pixel widths and no @media breakpoints, which made the app
+   overflow horizontally / become unusable below ~900px. Rather than
+   rewriting every single component file, this sheet is imported last
+   (see main.jsx) and uses !important where needed so its overrides
+   reliably win regardless of CSS import order in the Vite bundle.
+   ===================================================================== */
+
+/* Prevent the whole page from ever scrolling sideways, which is the
+   single most common "broken on mobile" symptom (fixed-width elements
+   pushing the viewport wider than the screen). */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ---------------------------------------------------------------------
+   Generic containers / sections
+   --------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .container {
+    width: 94% !important;
+  }
+
+  .section-title {
+    font-size: 32px !important;
+  }
+
+  .section-subtitle {
+    font-size: 15px !important;
+    margin-bottom: 32px !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Hero section
+   --------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 40px 6% !important;
+    min-height: auto !important;
+  }
+
+  .hero-content h1 {
+    font-size: 44px !important;
+    letter-spacing: -1px !important;
+    max-width: 100% !important;
+  }
+
+  .hero-content p {
+    font-size: 16px !important;
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .hero-image img {
+    width: 320px !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Category / restaurant grids - make sure minmax columns never force
+   overflow on very narrow phones.
+   --------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .categories-grid,
+  .restaurant-grid,
+  .food-grid,
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .categories-header h2 {
+    font-size: 34px !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Dashboard layouts (Admin + Owner both reuse .dashboard / .sidebar /
+   .dashboard-content), which used a fixed 280px sidebar + margin-left
+   layout that overflowed badly on phones.
+   --------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .dashboard {
+    flex-direction: column !important;
+  }
+
+  .dashboard-content {
+    margin-left: 0 !important;
+    padding: 20px !important;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    min-height: auto !important;
+    position: relative !important;
+    padding: 16px !important;
+  }
+
+  .sidebar-logo {
+    font-size: 24px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .sidebar nav {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+
+  .sidebar nav a {
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+  }
+
+  .sidebar-footer {
+    margin-top: 16px !important;
+    padding-top: 16px !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Tables - most admin/order tables are plain <table> elements with no
+   responsive handling, which forces horizontal scroll of the whole
+   page instead of just the table. Wrapping isn't possible without
+   touching every JSX file, so instead we let the table itself scroll.
+   --------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Forms / auth-style cards / modals - keep comfortable padding and
+   full-width inputs on small screens.
+   --------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .modal,
+  .form-card,
+  .checkout-card,
+  .profile-card {
+    width: 94% !important;
+    padding: 20px !important;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px !important; /* prevents iOS auto-zoom on focus */
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Cart drawer - fixed 380px width overflows any phone narrower than
+   that (most phones).
+   --------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .cart-drawer {
+    width: 100% !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Buttons - avoid oversized desktop padding eating up phone screens.
+   --------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .primary-btn,
+  .order-btn,
+  .menu-btn {
+    padding: 12px 22px !important;
+    font-size: 15px !important;
+  }
+}

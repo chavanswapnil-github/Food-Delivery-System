@@ -1,0 +1,60 @@
+.add-restaurant{
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+.add-restaurant h1{
+
+    margin-bottom:30px;
+}
+
+.add-restaurant form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.add-restaurant input,
+.add-restaurant textarea{
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #334155;
+
+    background:#1e293b;
+
+    color:white;
+
+    font-size:16px;
+}
+
+.add-restaurant textarea{
+
+    resize:none;
+
+    height:120px;
+}
+
+.add-restaurant button{
+
+    background:#ff6b35;
+
+    color:white;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}

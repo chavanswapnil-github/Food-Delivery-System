@@ -1,0 +1,164 @@
+.profile-page {
+  background: #f4f5f7;
+  min-height: 100vh;
+}
+
+.profile-banner {
+  background: #4f7d97;
+  color: white;
+  padding: 40px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #ff6b35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: bold;
+  color: white;
+}
+
+.banner-left h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.banner-left p {
+  margin: 6px 0;
+  font-size: 20px;
+}
+
+.banner-left span {
+  font-size: 17px;
+}
+
+.edit-btn {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.profile-body {
+  display: flex;
+  gap: 30px;
+  padding: 35px 80px;
+}
+
+.profile-sidebar {
+  width: 260px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.profile-sidebar div {
+  padding: 15px 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 8px;
+  transition: .3s;
+  font-size: 17px;
+}
+
+.profile-sidebar div:hover {
+  background: #fff3ed;
+}
+
+.profile-sidebar .active {
+  background: #ffefe8;
+  color: #ff6b35;
+  font-weight: bold;
+}
+
+.logout-btn {
+  color: red;
+  margin-top: 30px;
+}
+
+.profile-content {
+  flex: 1;
+}
+
+/* FIX 1: Explicitly force headers inside content container to be visible */
+.profile-content h2 {
+  color: #222222 !important;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.08);
+}
+
+.info-card div {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-card label {
+  font-weight: bold;
+  color: #555555 !important;
+}
+
+/* FIX 2: Solid high-contrast text rendering values */
+.info-card p {
+  margin: 0;
+  color: #222222 !important;
+  font-size: 17px;
+  font-weight: 500;
+}
+.save-btn{
+    margin-top:20px;
+    padding:12px 24px;
+    border:none;
+    border-radius:8px;
+    background:#22c55e;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#16a34a;
+}
+
+.info-card input{
+    width:100%;
+    padding:10px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    font-size:15px;
+    margin-top:6px;
+}

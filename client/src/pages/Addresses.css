@@ -1,0 +1,227 @@
+.address-page {
+  padding: 50px 6%;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.address-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.address-header h1 {
+  font-size: 34px;
+  color: var(--text);
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.add-btn:hover {
+  background: var(--primary-hover);
+}
+
+.address-status {
+  color: var(--text2);
+}
+
+.address-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: var(--text2);
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 20px;
+  padding: 70px 20px;
+}
+
+.address-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 22px;
+}
+
+.address-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.address-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 107, 53, 0.5);
+}
+
+.address-card.is-default {
+  border-color: var(--primary);
+}
+
+.address-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.address-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+.default-badge {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--success);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.address-name {
+  color: var(--text);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.address-phone,
+.address-line {
+  color: var(--text2);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.address-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.address-actions button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--background);
+  color: var(--text2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.address-actions button:hover {
+  color: var(--text);
+  border-color: var(--primary);
+}
+
+.address-actions button.danger:hover {
+  color: #f87171;
+  border-color: #f87171;
+}
+
+.address-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 20, 0.72);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2100;
+  padding: 20px;
+}
+
+.address-confirm-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.address-confirm-icon {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.12);
+  border-radius: 50%;
+  padding: 12px;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 8px;
+}
+
+.address-confirm-box h3 {
+  color: var(--text);
+  font-size: 18px;
+}
+
+.address-confirm-box p {
+  color: var(--text2);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.address-confirm-actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.address-confirm-actions button {
+  flex: 1;
+  padding: 11px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--background);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+
+.address-confirm-actions button:hover {
+  color: var(--text);
+}
+
+.address-confirm-actions button.danger {
+  background: #f87171;
+  color: white;
+  border-color: #f87171;
+}
+
+.address-confirm-actions button.danger:hover {
+  background: #ef4444;
+}

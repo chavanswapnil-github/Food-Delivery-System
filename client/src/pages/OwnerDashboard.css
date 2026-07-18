@@ -1,0 +1,49 @@
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: #94a3b8;
+    font-size: 17px;
+}
+
+.dashboard-btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ff6b35, #ff814d);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 12px 35px rgba(255, 107, 53, .35);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+/* Step 4 - Bottom Dashboard Split Layout & Breakpoints */
+.dashboard-bottom {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+@media(max-width: 1000px) {
+    .dashboard-bottom {
+        grid-template-columns: 1fr;
+    }
+}
