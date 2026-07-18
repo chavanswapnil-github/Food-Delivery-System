@@ -87,10 +87,6 @@ const loginUser = async (email, password) => {
 // ==========================================
 // 3. GOOGLE LOGIN / REGISTER
 // ==========================================
-// `idToken` is the credential the FRONTEND gets back from Google
-// (Google Identity Services / One Tap / the Google button). We verify it
-// with Google directly here on the backend — the frontend never gets to
-// tell us who the user is, Google does.
 const googleLogin = async (idToken) => {
   if (!idToken) {
     throw new Error("Google ID token is required");
@@ -108,6 +104,7 @@ const googleLogin = async (idToken) => {
     });
     payload = ticket.getPayload();
   } catch (err) {
+    console.error("❌ Google verifyIdToken failed:", err.message);
     throw new Error("Invalid Google token");
   }
 
